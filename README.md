@@ -63,3 +63,4 @@ The built-in **Salary Allocation Planner** breaks down your net monthly income i
 <img width="1915" height="985" alt="image-6" src="https://github.com/user-attachments/assets/eb7ebad0-67ef-4519-a5dc-58dfc05fce03" />
 <img width="1903" height="944" alt="image-5" src="https://github.com/user-attachments/assets/a911adef-f0a6-4aa8-be86-c0ec8dfd93f6" />
 
+visit this link for more exploration: https://budjito.vercel.app/
