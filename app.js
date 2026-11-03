@@ -499,20 +499,26 @@ function renderAuth() {
   $('#app').hidden = true; const a = $('#auth'); a.hidden = false;
   const reg = authMode === 'register', first = !Object.keys(getUsers()).length, legacy = first && !!store.get('personalBudgetTracker.v1');
   a.innerHTML = `<div class="auth-wrap"><div class="card auth-card">
-    <div class="auth-top"><div class="brand auth-brand">Budjito<small>${reg ? 'Create your account' : 'Track mo ang budget mo!'}</small></div><button type="button" class="theme-btn js-theme">Lights on's / lights off</button></div>
-    <div class="seg"><button type="button" class="${reg ? '' : 'on'}" data-act="auth-mode" data-id="login">Log in</button><button type="button" class="${reg ? 'on' : ''}" data-act="auth-mode" data-id="register">Create account</button></div>
-    ${reg ? `<form class="stack" id="regForm"><label class="field"><span>Username</span><input name="username" autocomplete="username" required minlength="3" maxlength="24" autofocus></label>
-      <label class="field"><span>Password (8+ characters)</span><input type="password" name="password" autocomplete="new-password" required minlength="8"></label>
-      <label class="field"><span>Confirm password</span><input type="password" name="confirm" autocomplete="new-password" required minlength="8"></label>
-      ${legacy ? '<p class="note">Your existing tracker data on this browser will be added to this account.</p>' : '<label class="chk"><input type="checkbox" name="sample" checked> Start with sample data (June to November 2026)</label>'}
-      <label class="chk"><input type="checkbox" data-showpw> Show passwords</label><label class="chk"><input type="checkbox" name="remember" checked> Keep me logged in on this browser</label>
-      <button class="btn" type="submit">Create account</button></form>`
-    : `<form class="stack" id="loginForm"><label class="field"><span>Username</span><input name="username" autocomplete="username" required autofocus></label>
-      <label class="field"><span>Password</span><input type="password" name="password" autocomplete="current-password" required></label>
-      <label class="chk"><input type="checkbox" data-showpw> Show password</label><label class="chk"><input type="checkbox" name="remember" checked> Keep me logged in on this browser</label>
-      <button class="btn" type="submit">Log in</button></form>`}
-    <p class="msg" id="authMsg" role="alert"></p>
-    <p class="note">Accounts and data live in this browser only. There is no password recovery, and anyone who can open this browser's site data can read them. Use Settings > Export backup to keep a copy.</p></div></div>`;
+<div class="brand auth-brand">Budjito<small>${reg ? 'Create your account' : 'Track mo ang budget mo!'}</small></div>
+  <div class="seg"><button type="button" class="${reg ? '' : 'on'}" data-act="auth-mode" data-id="login">Log in</button><button type="button" class="${reg ? 'on' : ''}" data-act="auth-mode" data-id="register">Create account</button></div>
+      ${reg ? `<form class="stack" id="regForm"><label class="field"><span>Username</span><input name="username" autocomplete="username" required minlength="3" maxlength="24" autofocus></label>
+        <label class="field"><span>Password (8+ characters)</span><input type="password" name="password" autocomplete="new-password" required minlength="8"></label>
+        <label class="field"><span>Confirm password</span><input type="password" name="confirm" autocomplete="new-password" required minlength="8"></label>
+        ${legacy ? '<p class="note">Your existing tracker data on this browser will be added to this account.</p>' : '<label class="chk"><input type="checkbox" name="sample" checked> Start with sample data (June to November 2026)</label>'}
+        <label class="chk"><input type="checkbox" data-showpw> Show passwords</label><label class="chk"><input type="checkbox" name="remember" checked> Keep me logged in on this browser</label>
+        <button class="btn" type="submit">Create account</button></form>`
+      : `<form class="stack" id="loginForm"><label class="field"><span>Username</span><input name="username" autocomplete="username" required autofocus></label>
+        <label class="field"><span>Password</span><input type="password" name="password" autocomplete="current-password" required></label>
+        <label class="chk"><input type="checkbox" data-showpw> Show password</label><label class="chk"><input type="checkbox" name="remember" checked> Keep me logged in on this browser</label>
+        <button class="btn" type="submit">Log in</button></form>`}
+      <p class="msg" id="authMsg" role="alert"></p>
+  <p class="note">Accounts and data live in this browser only. There is no password recovery, and anyone who can open this browser's site data can read them. Use Settings > Export backup to keep a copy.</p>
+    </div>
+    <footer class="auth-footer">
+      <span>© 2026 BUDJITO</span>
+      <span class="version">VERSION 1.0.0</span>
+    </footer>
+  </div>`;
 }
 
 /* ---------- events ---------- */
