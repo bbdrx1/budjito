@@ -1,4 +1,4 @@
-﻿# ₱ Personal Monthly Budget Tracker
+﻿# ₱ Budjito a Monthly Budget Tracker
 
 ![PHP Currency](https://img.shields.io/badge/Currency-PHP%20(%E2%82%B1)-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
