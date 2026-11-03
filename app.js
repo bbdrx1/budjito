@@ -499,7 +499,7 @@ function renderAuth() {
   $('#app').hidden = true; const a = $('#auth'); a.hidden = false;
   const reg = authMode === 'register', first = !Object.keys(getUsers()).length, legacy = first && !!store.get('personalBudgetTracker.v1');
   a.innerHTML = `<div class="auth-wrap"><div class="card auth-card">
-    <div class="auth-top"><div class="brand auth-brand">Personal Budget Tracker<small>${reg ? 'Create your account' : 'Log in to your budget'}</small></div><button type="button" class="theme-btn js-theme">Light / dark</button></div>
+    <div class="auth-top"><div class="brand auth-brand">Budjito<small>${reg ? 'Create your account' : 'Track mo ang budget mo!'}</small></div><button type="button" class="theme-btn js-theme">Lights on's / lights off</button></div>
     <div class="seg"><button type="button" class="${reg ? '' : 'on'}" data-act="auth-mode" data-id="login">Log in</button><button type="button" class="${reg ? 'on' : ''}" data-act="auth-mode" data-id="register">Create account</button></div>
     ${reg ? `<form class="stack" id="regForm"><label class="field"><span>Username</span><input name="username" autocomplete="username" required minlength="3" maxlength="24" autofocus></label>
       <label class="field"><span>Password (8+ characters)</span><input type="password" name="password" autocomplete="new-password" required minlength="8"></label>
